@@ -1,4 +1,7 @@
-* SRFI-11: Syntax for receiving multiple values
+# SRFI 11 for CL: Syntax for receiving multiple values
+
+* https://srfi.schemers.org/srfi-11
+* License:Unlicense
 
 - Copyright (C) Lars T Hansen (1999). All Rights Reserved.
 

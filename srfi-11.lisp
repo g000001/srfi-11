@@ -1,10 +1,10 @@
 ;;;; srfi-11.lisp
 
-(cl:in-package :srfi-11-internal)
+(cl:in-package "https://github.com/g000001/srfi-11#internals")
 
-(def-suite srfi-11)
 
-(in-suite srfi-11)
+(def-suite* srfi-11)
+
 
 ;; This code is in the public domain.
 
@@ -36,6 +36,7 @@
              (let-values "bind" ?bindings (?tmp *** (?a x)) ?body))
          ?e0)))))
 
+
 (define-syntax let*-values
   (syntax-rules ()
     ((let*-values () ?body0 ?body1 ***)
@@ -44,6 +45,7 @@
     ((let*-values (?binding0 ?binding1 ***) ?body0 ?body1 ***)
      (let-values (?binding0)
        (let*-values (?binding1 ***) ?body0 ?body1 ***)))))
+
 
 (test let-values
   (is (equal (let-values (((x y z) (values 1 2 3))
@@ -63,8 +65,4 @@
              (list x y z))))
 
 
-
-
-
-
-
+;;; *EOF*

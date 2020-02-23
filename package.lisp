@@ -1,11 +1,18 @@
 ;;;; package.lisp
 
-(cl:in-package :cl-user)
+(cl:in-package cl-user)
 
-(defpackage :srfi-11
-  (:export :let-values
-           :let*-values))
 
-(defpackage :srfi-11-internal
-  (:use :srfi-11 :cl :fiveam :mbe))
+(defpackage "https://github.com/g000001/srfi-11"
+  (:export let-values
+           let*-values))
 
+
+(defpackage "https://github.com/g000001/srfi-11#internals"
+  (:use "https://github.com/g000001/srfi-11"
+        cl
+        fiveam
+        mbe))
+
+
+;;; *EOF*
